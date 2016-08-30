@@ -7,6 +7,8 @@
     android:background="@mipmap/bg"
     tools:context="com.wuziqi.cjs.wuziqi.MainActivity">
    <Button
+           android:background="@drawable/bac_circle"
+           android:layout_marginTop="10dp"
            android:id="@+id/restare"
            android:layout_width="60dp"
            android:text="重新开始"

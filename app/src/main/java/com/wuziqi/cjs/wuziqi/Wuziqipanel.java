@@ -1,6 +1,7 @@
 package com.wuziqi.cjs.wuziqi;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -106,6 +107,24 @@ public class Wuziqipanel extends View {
             mIsWhiteWinner=whiteWin;
 
             String text=mIsWhiteWinner?"白棋胜利":"黑棋胜利";
+            //Game Over
+            MyDialog.Builder builder=new MyDialog.Builder(getContext());
+            builder.setMessage(text);
+            builder.setTitle("提示");
+            builder.setPositiveButton("再来", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.dismiss();
+                    start();
+                }
+            });
+            builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    dialogInterface.dismiss();
+                }
+            });
+            builder.create().show();
 
             Toast.makeText(getContext(),text,Toast.LENGTH_SHORT).show();
         }
