@@ -33,7 +33,7 @@
     <style name="sdw_79351b">
         <item name="android:shadowColor">#ff79351b</item>
         <item name="android:shadowDx">0.0</item>
-        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowDy">0.65</item>
         <item name="android:shadowRadius">1.0</item>
     </style>
 
